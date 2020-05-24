@@ -70,4 +70,7 @@
     border-radius: 2px;
 }
 
+.activeLink {
+    font-weight: 600;
+}
 /*END - Left menu site  */

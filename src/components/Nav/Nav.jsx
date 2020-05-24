@@ -1,40 +1,41 @@
 import React from 'react';
 import css from './Nav.module.css'
+import {NavLink} from "react-router-dom";
 
 function Nav() {
     return (
         <nav className={css.app_nav}>
             <ol>
                 <li>
-                    <a href="/">
-                        <span className={css.f1 + " "+ css.left_icon}></span>
+                    <NavLink to="/profile" activeClassName={css.activeLink}>
+                        <span className={css.f1 + " " + css.left_icon}></span>
                         <span className={css.left_label}>Профиль</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/">
-                        <span className={css.f2 + " "+ css.left_icon}></span>
+                    <NavLink to="/dialogs" activeClassName={css.activeLink}>
+                        <span className={css.f2 + " " + css.left_icon}></span>
                         <span className={css.left_label}>Сообщения</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/">
-                        <span className={css.f3 + " "+ css.left_icon}></span>
+                    <NavLink to="/news" activeClassName={css.activeLink}>
+                        <span className={css.f3 + " " + css.left_icon}></span>
                         <span className={css.left_label}>Новости</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="/">
-                        <span className={css.f4 + " "+ css.left_icon}></span>
+                    <NavLink to="/Music" activeClassName={css.activeLink}>
+                        <span className={css.f4 + " " + css.left_icon}></span>
                         <span className={css.left_label}>Музыка</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <br></br>
                 <li>
-                    <a href="/">
-                        <span className={css.f5 + " "+ css.left_icon}></span>
+                    <NavLink to="/settings" activeClassName={css.activeLink}>
+                        <span className={css.f5 + " " + css.left_icon}></span>
                         <span className={css.left_label}>Настройки</span>
-                    </a>
+                    </NavLink>
                 </li>
             </ol>
         </nav>

@@ -1,0 +1,107 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: minmax(600px, auto);
+}
+
+.dialogs_items{
+
+    border-right: solid 1px #e7e8ec;
+}
+
+.dialog{
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 60px;
+}
+.dialog_photo{
+    display: grid;
+    justify-items:center;
+    align-items: center;
+}
+.photo1 {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: goldenrod;
+}
+.dialog_name{
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    font-size: 13px;
+    color: #285473;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+}
+.dialog_name a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #285473
+}
+.activeLink {
+    font-weight: 600;
+}
+
+.messages{
+
+
+}
+
+.message{
+display: grid;
+grid-template-areas:
+        "a1 b1"
+        "c1 b1";
+grid-template-columns: 80px auto;
+grid-template-rows: minmax(60px, auto);
+margin: 15px;
+
+}
+
+.message_photo{
+display: grid;
+grid-area: a1;
+justify-items:center;
+align-items: center;
+}
+.photo2 {
+height: 35px;
+width: 35px;
+border-radius: 50%;
+background-color: goldenrod;
+}
+
+.message_name{
+display: grid;
+grid-area: c1;
+justify-content: center;
+align-content: center;
+font-size: 13px;
+font-weight: 500;
+font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+}
+.message_con1{
+display: grid;
+grid-area: b1;
+justify-content: center;
+align-content: end;
+}
+.message_con2{
+display: grid;
+
+min-height: 60px;
+width: 400px;
+border-radius: 10px;
+box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+justify-content: start;
+align-content: center;
+padding-left: 10px;
+font-size: 13px;
+font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+
+}

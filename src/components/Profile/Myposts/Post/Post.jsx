@@ -1,10 +1,10 @@
 import React from 'react';
 import css from './Post.module.css';
 
-function Post() {
+function Post(props) {
     return (
         <div className={css.post}>
-            Post
+            {props.name}
         </div>
     );
 }
