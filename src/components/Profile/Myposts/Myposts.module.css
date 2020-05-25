@@ -1,13 +1,12 @@
 .pr2 {
     display: grid;
-    background-color: blueviolet;
     height: 100%;
     border-radius: 4px;
     grid-gap: 5px;
 
 }
 
-.myposts{
+.posts_0{
     display: grid;
     grid-template-rows: 200px auto;
     grid-gap: 5px;
@@ -17,7 +16,6 @@
 
 .ps1 {
     display: grid;
-    background-color: aquamarine;
     height: 100%;
     border-radius: 4px;
     grid-gap: 5px;
@@ -25,7 +23,6 @@
 
 .ps2 {
     display: grid;
-    background-color: darkgreen;
     height: 100%;
     border-radius: 4px;
     grid-gap: 5px;

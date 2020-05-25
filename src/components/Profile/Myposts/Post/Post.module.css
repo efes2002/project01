@@ -1,7 +1,68 @@
 .post {
     display: grid;
-    background-color: darkgoldenrod;
+    grid-template-areas:
+            "p1 p2"
+            "p1 p3";
+    grid-template-columns: 80px auto;
+    grid-template-rows: auto 15px;
     height: 100%;
-    border-radius: 4px;
+    width: 70%;
+    margin-bottom: 20px;
 
+}
+.photo2 {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: goldenrod;
+}
+.post_photo{
+    display: grid;
+    grid-area: p1;
+    justify-items:center;
+    align-items: center;
+}
+.post_text{
+    display: grid;
+    grid-area: p2;
+    justify-content: start;
+    align-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+}
+.post_like{
+    display: grid;
+    grid-template-columns: 15px 15px;
+    grid-template-rows: 15px;
+    grid-area: p3;
+    border-bottom: solid 1px #e7e8ec;
+    justify-content: right;
+    align-content: end;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+}
+.like_icon{
+    display: grid;
+    width: 11px;
+    height: 9px;
+    line-height: 13px;
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%229%22%20width%3D%2211%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7.9%200C9.612%200%2011%201.36%2011%203.039c0%201.688-.69%202.534-3.597%204.75L6.063%208.81a.931.931%200%2001-1.126%200l-1.34-1.022C.69%205.573%200%204.727%200%203.039%200%201.36%201.388%200%203.1%200c.904%200%202.4.9%202.4%202.25C5.5.9%206.996%200%207.9%200z%22%20fill%3D%22%23828a99%22%2F%3E%3C%2Fsvg%3E);
+    opacity: 0.48;
+}
+.like_label{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: #67707a;
+}
+
+.like_count{
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #67707a;
 }
