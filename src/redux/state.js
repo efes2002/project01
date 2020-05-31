@@ -1,44 +1,46 @@
-let renderEntireTree = () => {
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
 
-}
 
-
-let state = {
-    profilePage: {
-        posts: [
-            {id: 1, message: "Привет всем", likeCount: 2},
-            {id: 2, message: "Как дела у вас", likeCount: 10},
-            {id: 3, message: "Я тоже так думаю", likeCount: 5},
-        ],
-        newPostText: "new post2"
+let store = {
+    _state: {
+        profilePage: {
+            posts: [
+                {id: 1, message: "Привет всем", likeCount: 2},
+                {id: 2, message: "Как дела у вас", likeCount: 10},
+                {id: 3, message: "Я тоже так думаю", likeCount: 5},
+            ],
+            newPostText: "new post2"
+        },
+        dialogsPage: {
+            dialogs: [
+                {id: 1, name: "Иван"},
+                {id: 2, name: "Петр"},
+                {id: 3, name: "Сергей"}
+            ],
+            messages: [
+                {id: 1, name: "Иван", message: "Привет всем"},
+                {id: 2, name: "Сергей", message: "Почему так долго"},
+                {id: 3, name: "Петр", message: "Это я пишу вам"}
+            ]
+        }
     },
-    dialogsPage: {
-        dialogs: [
-            {id: 1, name: "Иван"},
-            {id: 2, name: "Петр"},
-            {id: 3, name: "Сергей"}
-        ],
-        messages: [
-            {id: 1, name: "Иван", message: "Привет всем"},
-            {id: 2, name: "Сергей", message: "Почему так долго"},
-            {id: 3, name: "Петр", message: "Это я пишу вам"}
-        ]
+    getState() {
+        return this._state;
+    },
+    subscribe(observer) {
+        this.renderEntireTree = observer;
+    },
+    renderEntireTree() {
+    },
+    dispatch(action) {
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this.renderEntireTree(store.getState());
+
     }
-}
 
-export let addPost = () => {
-    let newPost = {id: 4, message: state.profilePage.newPostText, likeCount: 87};
-    if (state.profilePage.newPostText) {
-        state.profilePage.posts.push(newPost);
-        state.profilePage.newPostText = '';
-        renderEntireTree();}
-}
-export let updateNewPostText = (newText) => {
-    state.profilePage.newPostText = newText;
-    renderEntireTree();
-}
-export let subscribe = (observer) => {
-    renderEntireTree = observer;
-}
+};
 
-export default state;
+
+export default store;
