@@ -21,8 +21,9 @@ let store = {
             messages: [
                 {id: 1, name: "Иван", message: "Привет всем"},
                 {id: 2, name: "Сергей", message: "Почему так долго"},
-                {id: 3, name: "Петр", message: "Это я пишу вам"}
-            ]
+                {id: 3, name: "Иван", message: "Это я пишу вам"}
+            ],
+            newMessageText: "new messages"
         }
     },
     getState() {

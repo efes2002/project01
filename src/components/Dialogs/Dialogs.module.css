@@ -4,28 +4,33 @@
     grid-template-rows: minmax(600px, auto);
 }
 
-.dialogs_items{
+.dialogs_items {
 
     border-right: solid 1px #e7e8ec;
+
+
 }
 
-.dialog{
+.dialog {
     display: grid;
     grid-template-columns: 80px auto;
     grid-template-rows: 60px;
 }
-.dialog_photo{
+
+.dialog_photo {
     display: grid;
-    justify-items:center;
+    justify-items: center;
     align-items: center;
 }
+
 .photo1 {
     height: 45px;
     width: 45px;
     border-radius: 50%;
     background-color: goldenrod;
 }
-.dialog_name{
+
+.dialog_name {
     display: grid;
     justify-content: start;
     align-content: center;
@@ -35,73 +40,130 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
 }
+
 .dialog_name a {
     display: block;
     text-decoration: none;
     cursor: pointer;
     color: #285473
 }
+
 .activeLink {
     font-weight: 600;
 }
 
-.messages{
-
+.messages {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-content: end;
+    align-items: end;
+}
+.message_elements {
+    display: grid;
 
 }
 
-.message{
-display: grid;
-grid-template-areas:
-        "a1 b1"
-        "c1 b1";
-grid-template-columns: 80px auto;
-grid-template-rows: minmax(60px, auto);
-margin: 15px;
+.message_chat_input {
+    display: grid;
+    padding-left: 26px;
+    padding-right: 0px;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    background: #fafbfc;
+}
+.d0{
+    display: grid;
+    grid-template-columns: auto 100px;
+    grid-template-rows: auto;
+    margin: 20px;
+}
+.d1{
+    display: grid;
 
 }
-
-.message_photo{
-display: grid;
-grid-area: a1;
-justify-items:center;
-align-items: center;
+.d1 textarea {
+    resize: none;
+    border-radius: 5px;
 }
+.d2{
+    display: grid;
+    align-content: center;
+    justify-content: end;
+
+}
+.d2 button{
+
+    height: 25px;
+    width: 75px;
+    font-size: 12px;
+    border-radius: 5px;
+    border-bottom: none;
+    border-bottom-color: #e7e8ec;
+    border-left: 1px solid rgb(169, 169, 169);
+    border-top: 1px solid rgb(169, 169, 169);
+    border-bottom: 1px solid rgb(169, 169, 169);
+    border-right: 1px solid rgb(169, 169, 169);
+
+
+
+
+
+}
+.message {
+    display: grid;
+    grid-template-areas: "a1 c1" "a1 b1";
+    grid-template-columns: 80px auto;
+    grid-template-rows: 20px minmax(20px, auto);
+    margin: 15px 15px 25px 15px;
+}
+
+.message_photo {
+    display: grid;
+    grid-area: a1;
+    justify-items: center;
+    align-items: center;
+}
+
 .photo2 {
-height: 35px;
-width: 35px;
-border-radius: 50%;
-background-color: goldenrod;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: goldenrod;
 }
 
-.message_name{
-display: grid;
-grid-area: c1;
-justify-content: center;
-align-content: center;
-font-size: 13px;
-font-weight: 500;
-font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+.message_name {
+    display: grid;
+    grid-area: c1;
+    height: 20px;
+    justify-content: start;
+    align-content: center;
+    color: #42648b;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
 }
-.message_con1{
-display: grid;
-grid-area: b1;
-justify-content: center;
-align-content: end;
+
+.message_con1 {
+    display: grid;
+    grid-area: b1;
+    height: auto;
+    justify-content: start;
+    align-content: end;
 }
-.message_con2{
-display: grid;
 
-min-height: 60px;
-width: 400px;
-border-radius: 10px;
-box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
-justify-content: start;
-align-content: center;
-padding-left: 10px;
-font-size: 13px;
-font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
-
+.message_con2 {
+    display: grid;
+    word-break: break-all;
+    min-height: 20px;
+    width: 400px;
+    justify-content: start;
+    align-content: center;
+    padding-left: 0px;
+    font-weight: 400;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
 }
