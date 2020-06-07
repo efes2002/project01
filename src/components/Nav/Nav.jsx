@@ -32,6 +32,13 @@ function Nav() {
                 </li>
                 <br></br>
                 <li>
+                    <NavLink to="/users" activeClassName={css.activeLink}>
+                        <span className={css.f2 + " " + css.left_icon}></span>
+                        <span className={css.left_label}>Пользователи</span>
+                    </NavLink>
+                </li>
+                <br></br>
+                <li>
                     <NavLink to="/settings" activeClassName={css.activeLink}>
                         <span className={css.f5 + " " + css.left_icon}></span>
                         <span className={css.left_label}>Настройки</span>
