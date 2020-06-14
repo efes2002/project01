@@ -3,7 +3,7 @@ import css from './Post.module.css';
 
 function Post(props) {
     return (
-        <div className={css.post}>
+        <div className={css.post} key={props.id}>
             <div className={css.post_photo}><div className={css.photo2}></div></div>
             <div className={css.post_text}>
                 {props.message}
