@@ -1,3 +1,56 @@
 .selectPage{
     font-weight: bold;
 }
+.us {
+    margin: 10px;
+}
+.us2 {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows: 150px;
+    padding-top: 10px;
+}
+.us21{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+}
+.us21 img {
+    width: 140px;
+    height: 140px;
+    margin: 0px;
+    border-radius: 50%;
+}
+.us22{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25px 25px 25px 30px;
+    margin-top: 20px;
+}
+
+
+.us221 {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    padding-left: 10px;
+}
+.us222 {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    padding-left: 10px;
+}
+.us223 {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    padding-left: 10px;
+}
+.us224 {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    padding-left: 10px;
+}

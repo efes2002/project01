@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
-import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import {Route} from "react-router-dom";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             <Header/>
             <Nav/>
             <div className="app_content">
-                <Route path="/Profile" render={() => <Profile/>}/>
+                <Route path="/Profile/:userId?" render={() => <ProfileContainer/>}/>
                 <Route path="/Dialogs" render={() => <DialogsContainer/>}/>
                 <Route path="/Users" render={() => <UsersContainer/>}/>
                 <Route path="/News" render={() => <News/>}/>

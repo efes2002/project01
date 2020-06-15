@@ -1,5 +1,7 @@
 import React from "react";
 import css from './Users.module.css';
+import logo from '../../assets/images/A2.png'
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
     let pageCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -11,25 +13,40 @@ let Users = (props) => {
     return (
         <div>
             <div>{pages.map(p => {
-                    return <span className={props.currentPage === p && css.selectPage}
+                    return <span key={Math.random()} className={props.currentPage === p ? css.selectPage: null}
                                  onClick={() => {
                                      props.onPageChanged(p);
                                  }}>{p} </span>
                 })}
             </div>
-            <div>
+            <div className={css.us} >
                 {props.users.map(u =>
-                    <div key={Math.random()}>
-                        <span><img src={u.photos.small} width="150" height="150"
-                                   alt="dd"/></span>
-                        {(u.followed === true)
-                            ? <button onClick={() => {
-                               props.unfollow(u.id)
-                            }}>follow</button>
-                            : <button onClick={() => {
-                                props.follow(u.id)
-                            }}>unfollow</button>}
-                        <span>{" Имя: " + u.name} </span>
+                    <div key={Math.random()} className={css.us2}>
+                        <div className={css.us21}>
+                            <NavLink to={'/profile/' + u.id}>
+                                <img src={u.photos.small == null ? logo : u.photos.small} alt="dd"/>
+                            </NavLink>
+                        </div>
+                        <div className={css.us22}>
+                            <div className={css.us221}>
+                                {" Имя: " + u.name}
+                            </div>
+                            <div className={css.us222}>
+                                City
+                            </div>
+                            <div className={css.us223}>
+                                Contry
+                            </div>
+                            <div className={css.us224}>
+                                {u.followed === true
+                                    ? <button onClick={() => {props.unfollow(u.id)}}>follow</button>
+                                    : <button onClick={() => {props.follow(u.id)}}>unfollow</button>}
+                            </div>
+                        </div>
+
+
+
+
                     </div>
                 )}
             </div>
