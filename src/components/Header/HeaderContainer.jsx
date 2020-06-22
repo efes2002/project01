@@ -17,7 +17,7 @@ class HeaderContainer extends React.Component {
                     let {id, email, login} = response.data.data;
 
                     this.props.setAuthUserDate(id, email, login)
-                    debugger
+
                 }
 
             });
