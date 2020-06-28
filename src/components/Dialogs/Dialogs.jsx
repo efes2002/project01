@@ -4,20 +4,20 @@ import DialogItems from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 
+
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogsPage.dialogs.map(value => <DialogItems id={value.id} name={value.name} key={Math.random()}/>);
     let messageElements = props.dialogsPage.messages.map(value => <Message name={value.name} text={value.message} key={Math.random()}/>);
-
     let newMessageElement = React.createRef();
 
     let addMessage = () => {
-        props.SendMessage();
+        props.addMessageActionCreator();
     };
 
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.updateNewMessageText(text);
+        props.updateNewMessageTextActionCreator(text);
     };
 
     return (
