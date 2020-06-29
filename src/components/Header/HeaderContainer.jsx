@@ -6,6 +6,7 @@ import {auth} from "../../redux/auth-reducer";
 
 
 
+
 class HeaderContainer extends React.Component {
     componentDidMount() {
         this.props.auth();
@@ -14,6 +15,7 @@ class HeaderContainer extends React.Component {
         return <Header {...this.props}/>;
     }
 }
+
 
 
 

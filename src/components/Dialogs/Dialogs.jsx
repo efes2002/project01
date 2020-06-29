@@ -20,6 +20,7 @@ const Dialogs = (props) => {
         props.updateNewMessageTextActionCreator(text);
     };
 
+
     return (
         <div className={css.dialogs}>
             <div className={css.dialogs_items}>
