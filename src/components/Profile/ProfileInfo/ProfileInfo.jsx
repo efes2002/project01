@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './ProfileInfo.module.css';
-import logo from './Photo/photo1.jpg'
+import logo from './Photo/photo1.jpg';
+import ProfileStatus from "./ProfileStatus"
 
 function ProfileInfo(props) {
 
@@ -13,7 +14,7 @@ function ProfileInfo(props) {
                 <p className={css.text1}><span className={css.span1}>Страна: </span> <span className={css.span2}> Россия</span></p>
                 <p className={css.text1}><span className={css.span1}>Город: </span> <span className={css.span2}> Волгоград</span></p>
                 <p className={css.text1}><span className={css.span1}>Возраст: </span> <span className={css.span2}> 20 лет</span></p>
-
+                <ProfileStatus status={"vhfhfhfh fhfhf"}/>
             </div>
 
         </div>
